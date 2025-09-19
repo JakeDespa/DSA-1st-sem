@@ -7,13 +7,21 @@ Organized by topics for easy navigation and practice.
 
 ## 📂 Structure
 ├── 📁 Arrays
+
 ├── 📁 LinkedList
+
 ├── 📁 Stack
+
 ├── 📁 Queue
+
 ├── 📁 Trees
+
 ├── 📁 Graphs
+
 ├── 📁 Sorting
+
 ├── 📁 Searching
+
 └── 📁 Recursion
 
 ---
