@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include<stdlib.h>
+define MAX 100
+
+typedef struct {
+    int elem[MAX];
+    int count;
+} List, *EPtr;
+
+List insertSorted(List L, int data) {
+    if (L.count == MAX) return L;
+    int i;
+    for (i = L.count-1; i >= 0 && L.elem[i] > data; i--) {
+        L.elem[i+1] = L.elem[i];
+    }
+    L.elem[i+1] = data;
+    L.count++;
+    return L;
+}
+void display(List L) {
+    int i;
+    for (i = 0; i < L.count; i++) {
+        printf("%d ", L.elem[i]);
+    }
+    printf("\n");
+}
+int main() {
+    List myList;
+    myList.count = 0;
+
+    myList = insertSorted(myList, 5);
+    myList = insertSorted(myList, 3);
+    myList = insertSorted(myList, 8);
+    myList = insertSorted(myList, 1);
+
+    display(myList); // Output should be: 1 3 5 8
+
+    return 0;
+}
